@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-HnmN9C0UT4XVE1aaXjReQahGtwiF6GOEoU5n5Lb7+bofeB1Z6yfphtT0MzG2zc3B" crossorigin="anonymous">
+    <title>Password Strength Checker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Checker</h1>
+        <label for="password">Enter your password:</label>
+        <div class="input-container">
+            <input type="password" id="password" oninput="checkPasswordStrength()" placeholder="Your secure password">
+            <i class="far fa-eye" id="togglePassword"></i>
+        </div>
+        <div id="strength-meter">
+            <div id="strength-text">Strength: <span id="strength-label">Very Weak</span></div>
+            <div id="strength-bar"></div>
+        </div>
+        <div id="feedback-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

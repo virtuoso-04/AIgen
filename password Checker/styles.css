@@ -1,0 +1,96 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-container {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
+}
+
+#togglePassword {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+#togglePassword:hover {
+    color: #333;
+}
+
+#strength-meter {
+    margin-top: 20px;
+}
+
+#strength-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#strength-bar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    transition: width 0.5s ease;
+}
+
+#feedback-container {
+    margin-top: 20px;
+    color: #777;
+    text-align: left;
+}
+
+#feedback-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#feedback-container li {
+    margin-bottom: 8px;
+    color: #555;
+}
