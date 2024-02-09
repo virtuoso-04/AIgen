@@ -1,0 +1,40 @@
+const APIKey="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"
+const submitIcon = document.querySelector("#submit-icon")
+const inputElement = document.querySelector("input")
+const imageSection =document.querySelector('.images-section')
+
+
+ async function getImages() {
+    const options = {
+        method: "POST",
+        headers: {
+            "Authorisation": `Bearer ${APIKey}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            prompt: inputElement.value,
+            n: 4,
+            size: "1024x1024"
+        })
+    }
+    try {
+        const resposne = await fetch("POST https://api.openai.com/v1/images/generatio ns", options)
+        const data = await Response.json()
+        console.log(data)
+        data?.data.forEach(imageObject => {
+            const imageContainer = document.createElement("div")
+            imageContainer.classList.add("image-container")
+            const imageElement = document.createElement("img")
+            imageElement.setAttribute("src", imageObject.url)
+            imageContainer.append(imageElement)
+            imageSection.append(imageContainer)
+
+
+        })
+    }
+    catch (error) {
+        console.error(error)
+    }
+}
+
+submitIcon.addEventListener('click' , getImages)
