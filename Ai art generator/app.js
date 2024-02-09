@@ -18,9 +18,10 @@ const imageSection =document.querySelector('.images-section')
         })
     }
     try {
-        const resposne = await fetch("POST https://api.openai.com/v1/images/generatio ns", options)
+        const resposne = await fetch("https://api.openai.com/v1/images/generations")
         const data = await Response.json()
         console.log(data)
+        method:"POST",
         data?.data.forEach(imageObject => {
             const imageContainer = document.createElement("div")
             imageContainer.classList.add("image-container")
