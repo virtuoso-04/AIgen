@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ai art generator</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Future Art Generator</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="visual" viewBox="0 0 960 540" width="960" height="540" version="1.1"><path d="M0 109L87 77L175 147L262 77L349 260L436 109L524 222L611 163L698 66L785 131L873 185L960 271L960 0L873 0L785 0L698 0L611 0L524 0L436 0L349 0L262 0L175 0L87 0L0 0Z" fill="#5cd9d7"/><path d="M0 195L87 190L175 287L262 185L349 347L436 217L524 347L611 282L698 201L785 228L873 282L960 368L960 269L873 183L785 129L698 64L611 161L524 220L436 107L349 258L262 75L175 145L87 75L0 107Z" fill="#00c7f0"/><path d="M0 417L87 374L175 390L262 379L349 471L436 433L524 455L611 363L698 390L785 411L873 352L960 465L960 366L873 280L785 226L698 199L611 280L524 345L436 215L349 345L262 183L175 285L87 188L0 193Z" fill="#00aeff"/><path d="M0 503L87 465L175 498L262 471L349 509L436 471L524 509L611 460L698 460L785 471L873 455L960 503L960 463L873 350L785 409L698 388L611 361L524 453L436 431L349 469L262 377L175 388L87 372L0 415Z" fill="#008eff"/><path d="M0 541L87 541L175 541L262 541L349 541L436 541L524 541L611 541L698 541L785 541L873 541L960 541L960 501L873 453L785 469L698 458L611 458L524 507L436 469L349 507L262 469L175 496L87 463L0 501Z" fill="#0066ff"/></svg>
-         <header>
-          <h1>Aigen</h1>
-        </header>
-        <section class="images-section"></section>
-        <section class="bottom-section">
-         <div class="input-container">
-            <input/>
-            <div id="submit-icon"><img width="32" height="32" src="https://img.icons8.com/windows/32/submit-for-approval.png" alt="submit-for-approval"/> </div>
+        <svg class="grid-bg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 97, 182, 0.1)" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+
+        <div class="container">
+            <h1 class="title">AI Future Art Generator</h1>
+            
+            <div class="generator">
+                <div class="input-container">
+                    <textarea placeholder="Describe the retro-futuristic art piece you want to generate..."></textarea>
+                    <div class="style-selector">
+                        <h3>Art Style</h3>
+                        <div class="style-option selected" data-style="synthwave">Synthwave</div>
+                        <div class="style-option" data-style="vaporwave">Vaporwave</div>
+                        <div class="style-option" data-style="cyberpunk">Cyberpunk</div>
+                        <div class="style-option" data-style="retrofuturism">Retro-Futurism</div>
+                    </div>
+                </div>
+                
+                <button id="generate">Generate Art</button>
+                
+                <div class="output">
+                    <div class="loading">
+                        <svg class="computer" viewBox="0 0 100 100">
+                            <rect class="screen" x="20" y="20" width="60" height="40" rx="5"/>
+                            <rect fill="var(--neon-purple)" x="35" y="60" width="30" height="20"/>
+                        </svg>
+                    </div>
+                    <div class="art-canvas" id="artCanvas"></div>
+                </div>
             </div>
-        </section>   
-    </section>
-        <script src="app.js" async defer></script>
+        </div>
+
+        <script src="script.js"></script>
     </body>
 </html>

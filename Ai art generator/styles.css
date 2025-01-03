@@ -1,0 +1,38 @@
+/* Updated pastel color scheme */
+:root {
+  --pastel-pink: #FFD6E0; 
+  --pastel-blue: #C8E3F7;
+  --pastel-purple: #E2D1F9;
+  --pastel-yellow: #FFFFD1;
+  --dark-text: #333;
+  --light-bg: #FFF8F9;
+  --neon-pink: #ff61b6;
+  --neon-blue: #00d9ff;
+  --neon-purple: #b300ff;
+  --dark-bg: #0a0a15;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--light-bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-text);
+  display: flex;
+}
+
+/* ...existing CSS code... */
+
+.loading.active {
+  display: block;
+}
+
+/* Add proper error message styling */
+.error-message {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+}
